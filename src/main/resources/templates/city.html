@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Hot City Web Resource</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Hello</h1>
+
+<h2>And the hottest city now is ...</h2>
+<h1 th:inline="text">
+[[${city}]]
+</h1>
+with the temperature
+<h1 th:inline="text">
+[[${temp}]]
+</h1>
+</body>
+</html>

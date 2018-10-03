@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Hot City Web Resource</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Hello</h1>
+
+<h2>Enter a list of cities (ex: berlin,amsterdam,paris)</h2>
+   	<form th:action="@{/getWeather}"
+         th:object="${weatherForm}" method="POST">
+         Cities:
+         <input type="text" th:field="*{cities}" />    
+         <input type="submit" value="Get Hottest City!" />
+     </form>
+</body>
+</html>
