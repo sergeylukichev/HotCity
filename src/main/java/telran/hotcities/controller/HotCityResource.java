@@ -1,8 +1,5 @@
 package telran.hotcities.controller;
 
-import javax.xml.transform.Source;
-
-import org.assertj.core.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,9 +19,6 @@ public class HotCityResource {
 	@GetMapping("{cities}")
 	public HottestCity getHottestCity(@PathVariable String [] cities) throws Exception 
 	{
-		for(String s:cities) {
-			System.out.println(s);
-		}
 		return service.getHottestCity(cities);
 	}
 
